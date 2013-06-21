@@ -1,8 +1,7 @@
 (ns ^{:doc "Ketamine - Consistent hashing for Clojure."
       :author "Baishampayan Ghose <b.ghose@helpshift.com>"}
   ketamine.core
-  (:require [ketamine.util :refer [hash-code gen-keyval-map]]
-            [clojure.set :refer [union]]))
+  (:require [ketamine.util :refer [hash-code gen-keyval-map]]))
 
 (defprotocol ^:private IConsistentHashRing
   (-add-node [hash-ring node] "Add a new node to the hash ring.")
