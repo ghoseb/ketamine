@@ -1,7 +1,7 @@
 (ns ^{:doc "Ketamine - Consistent hashing for Clojure."
       :author "Baishampayan Ghose <b.ghose@helpshift.com>"}
   ketamine.core
-  (:require [ketamine.util :refer [hash-code gen-keyval-map]]))
+  (:require [ketamine.util :refer [hash-code gen-keyval-map indexed]]))
 
 (defprotocol ^:private IConsistentHashRing
   (-add-node [hash-ring node] "Add a new node to the hash ring.")
@@ -29,7 +29,7 @@
 
   (-get-node [_ key]
     (let [k (hash-code key)
-          candidate-nodes (for [[idx node-key] (map vector (range) sorted-ks) :when (<= k node-key)]
+          candidate-nodes (for [[idx node-key] (indexed sorted-ks) :when (<= k node-key)]
                             [(ring node-key) idx])]
       (if (seq candidate-nodes)
         (first candidate-nodes)

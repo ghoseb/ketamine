@@ -19,3 +19,9 @@
   (into {}
         (for [i (range replicas) :let [k (hash-code (str node ":" i))]]
           [k node])))
+
+
+(defn indexed
+  "Given a coll return a indexed version thereof."
+  [coll]
+  (map vector (range) coll))
