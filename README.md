@@ -8,6 +8,9 @@ added there is a minimum impact on existing resources as they are mapped
 Based on [Ketama algorithm](http://dl.acm.org/citation.cfm?id=258660) by
 Karger, et al.
 
+## Getting via Leiningen
+
+    [ketamine "1.0.0"]
 
 ## Usage
 

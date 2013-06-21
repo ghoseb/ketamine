@@ -1,4 +1,4 @@
-(defproject ketamine "0.1.0-SNAPSHOT"
+(defproject ketamine "1.0.0"
   :description "Consistent hashing library for Clojure."
   :url "https://github.com/ghoseb/ketamine/"
   :license {:name "Eclipse Public License"
