@@ -60,6 +60,13 @@ Karger, et al.
 
 Pull requests are more than welcome! Namasté.
 
+## See also
+
+[clojurewerkz/chash](https://github.com/michaelklishin/chash) is another
+library which does the same thing albeit with a different API. I had no
+clue about this library when I was writing Ketamine, hence the
+[NIH](http://en.wikipedia.org/wiki/Not_Invented_Here). Oh well...
+
 ## License
 
 Copyright © 2013 Baishampayan Ghose
